@@ -91,6 +91,11 @@ accessible writing:
   that they betray an absence of logical thinking but that they betray a
   history of inattention to the printed page.
 
+  Full disclosure: Pinker's book may have made me unreasonably giddy. [Rachael
+  Cayley's thoughtful
+  review](http://explorationsofstyle.com/2015/02/26/in-support-of-academic-writing/)
+  adds justified criticisms to the praise.
+
 - [How to Write a Sentence and How to Read one][sentence] complements Pinker's
   practical guide in a way that focuses more on style, and attempts to teach
   the reader to recognise and produce sentences that are not only structurally
