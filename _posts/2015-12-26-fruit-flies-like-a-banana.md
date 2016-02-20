@@ -6,6 +6,8 @@ tags:
 - language
 ---
 
+![Time flies like an arrow](/assets/timeflies.png)
+
 The go-to example to illustrate ambiguity in any introductory natural language
 processing course is *Time flies like an arrow*. I never realised just how
 ambiguous the sentence actually is before coming across this passage in Steven
