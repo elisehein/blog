@@ -6,7 +6,7 @@ tags:
 - language
 ---
 
-![Time flies like an arrow](/assets/timeflies.png)
+![Time flies like an arrow](/i/timeflies.png)
 
 The go-to example to illustrate ambiguity in any introductory natural language
 processing course is *Time flies like an arrow*. I never realised just how

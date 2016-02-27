@@ -14,7 +14,7 @@ When I finally discovered the new built-in cubic bezier editor in Chrome
 DevTools (released earlier this year), I felt more than a little late to the
 party.
 
-![The cubix bezier editor in action](/assets/cubicbezier.gif)
+![The cubix bezier editor in action](/i/cubicbezier.gif)
 
 The feature is simple, conceptually no different than, say, the colour
 picker: it indicates your current choice of easing function, and allows you to
