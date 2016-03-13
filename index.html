@@ -3,3 +3,38 @@ layout: default
 ---
 
 <h1>Elise Hein</h1>
+
+<section>
+  <h2>Projects</h2>
+
+  <ul>
+    <li>
+      <small>2016</small>
+      <a href="">Design for preventing copy & paste errors</a>
+    </li>
+
+    <li>
+      <small>2016</small>
+      <a href="">Monogram</a>
+    </li>
+
+    <li>
+      <small>2015</small>
+      <a href="">Smart medication adherence</a>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Latest posts</h2>
+
+  <ul>
+    {% for post in site.posts offset: 0 limit: 3 %}
+    <li>
+      <small>{{ post.date }}</small>
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+</section>
