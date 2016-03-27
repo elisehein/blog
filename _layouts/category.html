@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<h1>{{ page.category }}</h1>
+
+{% for post in site.categories[page.category] %}
+{% include single-post.html object=post %}
+{% endfor %}

@@ -10,28 +10,29 @@ layout: default
   <ul>
     <li>
       <small>2016</small>
-      <a href="">Design for preventing copy & paste errors</a>
+      <!-- TODO replace with category that reflects MSc topic -->
+      <a href="{{ site.baseurl }}/dissertation">Designing for copy & paste error prevention</a>
     </li>
 
     <li>
       <small>2016</small>
-      <a href="">Monogram</a>
+      <a href="{{ site.baseurl }}/monogram">Monogram</a>
     </li>
 
     <li>
       <small>2015</small>
-      <a href="">Smart medication adherence</a>
+      <a href="{{ site.baseurl }}/handy">Smart support for medication adherence</a>
     </li>
   </ul>
 </section>
 
 <section>
-  <h2>Latest posts</h2>
+  <h2>Latest</h2>
 
   <ul>
-    {% for post in site.posts offset: 0 limit: 3 %}
+    {% for post in site.posts offset: 0 limit: 5 %}
     <li>
-      <small>{{ post.date }}</small>
+      <small>{{ post.date | date: "%m.%Y"}}</small>
       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </li>
     {% endfor %}
