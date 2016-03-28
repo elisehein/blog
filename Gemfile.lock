@@ -89,11 +89,8 @@ DEPENDENCIES
   guard-jekyll-plus
   guard-livereload
   jekyll
-<<<<<<< cb916bf6610fab4e75adcf156e78d7f7a927695d
   jekyll-gist
-=======
   jekyll-paginate
->>>>>>> Begin restructuring site with a separate index, blog, and blog posts page. Add pagination.
 
 BUNDLED WITH
    1.10.6
