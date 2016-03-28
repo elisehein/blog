@@ -12,14 +12,15 @@ straightforward way to list all of the tags I've used for my posts. I'm not
 talking about the user-facing tag directory here -- there are plenty of
 plugins for that, and it's not difficult to write your own template.
 
-Instead, what I'm truly missing is a quick command to run that
-would give me an overview of the tags I've been using. I find that when
-writing a new post, I always struggle with tagging, and sometimes end up with
-duplicate tags using alternate phrasing.
+Instead, what I'm truly missing is a quick command to run that would give me
+an overview of my tag usage. When writing a new post, I struggle with tagging:
+sometimes I end up with alternate phrasing for semantically equivalent tags,
+other times I forget about the tags I've been using for a specific theme
+entirely. Having a condensed list in front of me is a good first solution.
 
-I came up with a quick and dirty first version of a command line tool that
-does exactly that. It loops through all posts, parses the YAML front matter
-with [`shyaml`](https://github.com/0k/shyaml), and finally orders and sorts tags
+I wrote a quick and dirty command line tool that does exactly that. It loops
+through all posts, parses the YAML front matter with
+[`shyaml`](https://github.com/0k/shyaml), and finally orders and sorts tags
 with `uniq`.
 
 {% gist elisehein/c879a12c108970142ae0 %}
