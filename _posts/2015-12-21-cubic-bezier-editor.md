@@ -2,8 +2,6 @@
 layout: post
 title: "More accessible cubic bezier functions"
 date: 2015-12-21 21:08:00 +0000
-categories:
-- technical
 tags:
 - dev ux
 ---
