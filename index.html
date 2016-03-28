@@ -30,11 +30,19 @@ layout: default
   <h2>Latest</h2>
 
   <ul>
-    {% for post in site.posts offset: 0 limit: 5 %}
-    <li>
-      <small>{{ post.date | date: "%m.%Y"}}</small>
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </li>
+    {% assign postCounter = 0 %}
+    {% assign maxPosts = 5 %}
+    {% for post in site.posts %}
+      {% unless post.categories contains "nolistlatest" %}
+        <li>
+          <small>{{ post.date | date: "%m.%Y"}}</small>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+        {% assign postCounter = postCounter | plus: 1 %}
+        {% if postCounter >= maxPosts %}
+          {% break %}
+        {% endif %}
+      {% endunless %}
     {% endfor %}
   </ul>
 
