@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tag usage overviews in Jekyll"
+title:  "Tag overviews in Jekyll"
 date:   2016-03-28 10:00:00 +0000
 tags: 
 - lifehacks
