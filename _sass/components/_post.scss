@@ -2,13 +2,17 @@
 @import "variables";
 
 .page--single-post {
-  padding: 20vmin 0 0 30vmin;
+  padding: 20vmin 0 0 40vmin;
 }
 
-// TODO vertical rhythm
 .single-post {
+  $line-height: 2 * $baseline;
 
-  $line-height: 1.57;
+  $side-margin-left: -120px;
+  $side-margin-right: 0;
+  $block-indent: 40px;
+  $paragraph-spacing: 2 * $baseline;
+  $element-spacing: 5 * $baseline;
 
   max-width: 560px;
   padding-bottom: 200px;
@@ -16,14 +20,14 @@
   line-height: $line-height;
 
   &__header {
-    margin-bottom: 100px;
+    margin-bottom: 8 * $baseline;
   }
 
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: $baseline;
     font-family: $font-serif-display;
     font-size: ms(2);
-    line-height: 1.3;
+    line-height: 4 * $baseline;
   }
 
   &__meta {
@@ -40,92 +44,95 @@
     }
   }
 
-  &__body {
+  h2 {
+    margin-top: $element-spacing;
+    margin-bottom: $paragraph-spacing;
+    font-family: $font-serif-display;
+    font-size: ms(1);
+    line-height: 3 * $baseline;
+  }
 
-    $side-margin-left: -60px;
-    $side-margin-right: -60px;
-    $block-indent: 40px;
-    $element-spacing: 15px;
+  // TODO
+  a {
+    color: inherit;
 
-    // TODO
-    a {
-      /*padding: 5px 3px;*/
-      /*margin: -5px -3px;*/
-      /*text-decoration: none;*/
-      color: inherit;
-      /*color: $color-blue;*/
-      /*background-color: $color-yellow;*/
-    }
+    &.reversefootnote {
+      text-decoration: none;
 
-    strong {
-      font-weight: 700;
-    }
-
-    em {
-      font-style: italic;
-    }
-
-    // TODO
-    code {
-      font-family: monospace;
-    }
-
-    p,
-    blockquote {
-      margin-bottom: $element-spacing;
-    }
-
-    blockquote {
-      font-size: 18px;
-    }
-
-    blockquote,
-    .gist {
-      margin: 0 $side-margin-right 0 $side-margin-left;
-    }
-
-    ol {
-      list-style: decimal;
-    }
-
-    ul {
-      position: relative;
-    }
-
-    ul li:before {
-      content: "\00B7";
-      position: absolute;
-      left: -15px;
-    }
-
-    ol,
-    ul {
-      margin-left: $block-indent;
-      margin-bottom: $element-spacing;
-
-      li:last-child {
-        margin-bottom: 0;
+      &:hover {
+        text-decoration: underline;
       }
     }
+  }
 
-    li {
-      margin-bottom: $element-spacing;
-    }
+  strong {
+    font-weight: 700;
+  }
 
-    sup {
-      vertical-align: super;
-      font-size: smaller;
-    }
+  em {
+    font-style: italic;
+  }
 
-    h2 {
-      font-family: $font-serif-display;
-      font-size: ms(1);
-    }
+  // TODO
+  code {
+    font-family: monospace;
+  }
 
-    img {
-      margin-left: $side-margin-left;
-      width: calc(100% + #{$side-margin-left + $side-margin-right});
+  p,
+  ul,
+  ol,
+  li {
+    margin-bottom: $paragraph-spacing;
+  }
+
+  blockquote,
+  pre,
+  img,
+  .gist {
+    margin: $element-spacing
+            $side-margin-right
+            $element-spacing
+            $side-margin-left;
+  }
+
+  img {
+    width: calc(100% + #{-$side-margin-left - $side-margin-right});
+  }
+
+  blockquote {
+    font-size: 18px;
+    line-height: 3 * $baseline;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul {
+    position: relative;
+  }
+
+  ul li:before {
+    content: "\00B7";
+    position: absolute;
+    left: -15px;
+  }
+
+  ol,
+  ul {
+    margin-left: $block-indent;
+
+    &.condensed li {
+      margin-bottom: 0;
     }
+  }
+
+  // https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/
+  sup {
+    position: relative;
+    top: -0.4em;
+    vertical-align: baseline;
+    font-size: smaller;
   }
 
   .fs-sc {
@@ -139,7 +146,6 @@
     font-family: $font-sans-serif;
     text-transform: uppercase;
     font-size: 1.1em;
-    line-height: ms(0) * $line-height;
 
     &__em {
       display: inline-block;
