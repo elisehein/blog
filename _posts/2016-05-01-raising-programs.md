@@ -2,6 +2,7 @@
 layout: post
 title:  "Raising programs"
 date:   2016-05-01 10:00:00 +0000
+theme: "Programming"
 tags: 
 - musings
 ---
