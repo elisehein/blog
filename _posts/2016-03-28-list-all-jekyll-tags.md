@@ -2,6 +2,7 @@
 layout: post
 title:  "Tag overviews in Jekyll"
 date:   2016-03-28 10:00:00 +0000
+theme: "Lifehacks"
 tags: 
 - lifehacks
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: "Fruit flies like a banana"
 date: 2015-12-26 11:27:00 +0000
+theme: "Musings"
 tags:
 - language
 ---
@@ -33,3 +34,4 @@ Pinker's [The Language Instinct](https://www.goodreads.com/book/show/5755.The_La
 >
 > Among computer scientists the discovery has been summed up in the aphorism
 > "Time flies like an arrow; fruit flies like a banana."
+

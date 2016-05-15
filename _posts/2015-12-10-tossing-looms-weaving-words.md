@@ -36,7 +36,7 @@ by Rich Hickey in his talk [Simple Made
 Easy](https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/SimpleMadeEasy.md)
 to warn developers against threading too tightly ("tossing the loom"):
 
-> [...] are you programming with a loom? You know, you're having a great time. You're
+> ... are you programming with a loom? You know, you're having a great time. You're
 throwing that shuttle back and forth. And what's coming out the other side is
 this knotted, you know, mess. I mean it may look pretty, but you have this
 problem. Right? What is the problem? The problem is the knitted castle
