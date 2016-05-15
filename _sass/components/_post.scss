@@ -86,6 +86,12 @@
     }
   }
 
+  .fs-sc {
+    font-family: $font-serif-sc;
+    font-weight: 300;
+    text-transform: lowercase;
+  }
+
   &__theme {
     float: left;
     font-family: $font-sans-serif;
@@ -98,10 +104,11 @@
       padding: 0 10px;
       transform: scaleX(2.2);
     }
-  }
 
-  .fs-sc {
-    font-family: $font-serif-sc;
-    text-transform: lowercase;
+    .fs-sc {
+      font-family: inherit;
+      font-weight: inherit;
+      text-transform: inherit;
+    }
   }
 }
