@@ -2,4 +2,10 @@
 layout: default
 ---
 
-{% include single-post.html object=page %}
+{% include head.html src="single-post-head.html" %}
+
+<body class="page--single-post">
+  {% include header.html %}
+  {% include single-post.html object=page %}
+  {% include footer.html %}
+</body>

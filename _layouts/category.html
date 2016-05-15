@@ -2,8 +2,14 @@
 layout: default
 ---
 
-<h1>{{ page.category }}</h1>
+<!-- TODO make category head -->
+{% include head.html src="single-post-head.html" %}
 
-{% for post in site.categories[page.category] %}
-{% include single-post.html object=post %}
-{% endfor %}
+<!-- TODO where do these come from? -->
+<body class="page--category">
+  <h1>{{ page.category }}</h1>
+
+  {% for post in site.categories[page.category] %}
+  {% include single-post.html object=post %}
+  {% endfor %}
+</body>

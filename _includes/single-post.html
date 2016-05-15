@@ -1,12 +1,22 @@
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="single-post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <a class="post-link" href="{{ include.object.url | prepend: site.baseurl }}">{{ include.object.title }}</a>
-    <h1 class="post-title" itemprop="name headline">{{ include.object.title }}</h1>
-    <p class="post-meta"><time datetime="{{ include.object.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.object.date | date: "%b %-d, %Y" }}</time>{% if include.object.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.object.author }}</span></span>{% endif %}</p>
+  <header class="single-post__header">
+    <h1 class="single-post__title">
+      {{ include.object.title }}
+    </h1>
+    <small class="single-post__meta">
+      <a href="/blog">&#8592; Elise Hein</a>
+      <time datetime="{{ include.object.date | date_to_xmlschema }}">
+        {{ include.object.date | date: "%d.%m.%Y" }}
+      </time>
+    </small>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <!-- TODO theme not showing under post in categories page -->
+  <div class="single-post__body">
+    {% if page.theme %}
+    <span class="single-post__theme">{{ page.theme }}<span class="single-post__theme__em">&mdash;</span></span>
+    {% endif %}
     {{ include.object.content }}
   </div>
 

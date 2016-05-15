@@ -3,6 +3,10 @@ layout: default
 title: Blog
 ---
 
+{% include head.html src="single-post-head.html" %}
+
+<body class="page--blog">
+
 {% for post in paginator.posts %}
 {% include single-post.html object=post %}
 {% endfor %}
@@ -22,3 +26,5 @@ title: Blog
 </div>
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</body>
