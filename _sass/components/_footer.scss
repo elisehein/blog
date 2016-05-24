@@ -1,3 +1,39 @@
+@import "variables";
+
 .top-level-footer {
-  display: none;
+  margin: 0 0 15vmin 15vmin;
+  font-family: $font-sans-serif;
+  line-height: 2 * $baseline;
+  color: $color-blue;
+
+  h3 {
+    font-weight: 700;
+  }
+
+  p {
+    display: inline-block;
+
+    &:first-child {
+      width: 400px;
+      margin-right: 30px;
+
+      & + p {
+        width: 300px;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 4 * $baseline;
+    font-weight: 700;
+  }
+
+  li:before {
+    content: "\2014";
+    display: inline-block;
+    padding-right: 20px;
+    font-weight: 400;
+    transform: scaleX(2.2);
+    transform-origin: left;
+  }
 }

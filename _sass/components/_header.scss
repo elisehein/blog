@@ -1,0 +1,18 @@
+@import "variables";
+
+.top-level-header {
+  position: fixed;
+  top: 3vmin;
+  left: 5vmin;
+  right: 5vmin;
+
+  a {
+    color: $color-blue;
+    text-decoration: none;
+    font-family: Karla;
+
+    & + a {
+      float: right;
+    }
+  }
+}

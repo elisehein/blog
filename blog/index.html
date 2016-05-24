@@ -1,14 +1,10 @@
 ---
-layout: default
+layout: blog
 title: Blog
 ---
 
-{% include head.html src="single-post-head.html" %}
-
-<body class="page--blog">
-
 {% for post in paginator.posts %}
-{% include single-post.html object=post %}
+{% include single-post.html object=post linkable-title=true %}
 {% endfor %}
 
 <div class="pagination">
@@ -26,5 +22,3 @@ title: Blog
 </div>
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</body>

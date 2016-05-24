@@ -2,14 +2,11 @@
 @import "variables";
 @import "vendor/modular-scale";
 
-$ms-base: 14px;
-$baseline: 22px;
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  color: #333;
-  font: 300 $ms-base/1 $font-serif;
+  color: $color-text;
+  font: 400 $ms-base/1 $font-serif;
 }

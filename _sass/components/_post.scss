@@ -1,26 +1,24 @@
 @import "vendor/modular-scale";
+@import "mixins";
 @import "variables";
-
-.page--single-post {
-  padding: 20vmin 0 0 40vmin;
-}
 
 .single-post {
   $line-height: 2 * $baseline;
 
-  $side-margin-left: -120px;
-  $side-margin-right: 0;
+  $content-width: 520px;
+  $side-margin-left: 0;
+  $side-margin-right: -($content-width / 3);
   $block-indent: 40px;
   $paragraph-spacing: 2 * $baseline;
   $element-spacing: 5 * $baseline;
 
-  max-width: 560px;
-  padding-bottom: 200px;
+  margin: 26vmin 0 (18 * $baseline) 32vmin;
+  max-width: $content-width;
   font-size: ms(0);
   line-height: $line-height;
 
   &__header {
-    margin-bottom: 8 * $baseline;
+    margin-bottom: 10 * $baseline;
   }
 
   &__title {
@@ -28,6 +26,14 @@
     font-family: $font-serif-display;
     font-size: ms(2);
     line-height: 4 * $baseline;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        @include smart-underline($color-text);
+      }
+    }
   }
 
   &__meta {
@@ -39,7 +45,7 @@
       margin-right: 10px;
 
       &:hover {
-        text-decoration: underline;
+        @include smart-underline($color-text);
       }
     }
   }
@@ -52,7 +58,6 @@
     line-height: 3 * $baseline;
   }
 
-  // TODO
   a {
     color: inherit;
 
@@ -62,6 +67,15 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  &__body a {
+    text-decoration: none;
+    @include smart-underline(rgba($color-text, 0.5));
+
+    &:hover {
+      @include smart-underline-color($color-text);
     }
   }
 
@@ -112,12 +126,6 @@
     position: relative;
   }
 
-  ul li:before {
-    content: "\00B7";
-    position: absolute;
-    left: -15px;
-  }
-
   ol,
   ul {
     margin-left: $block-indent;
@@ -125,6 +133,16 @@
     &.condensed li {
       margin-bottom: 0;
     }
+
+    blockquote {
+      margin-left: $side-margin-left - $block-indent;
+    }
+  }
+
+  ul li:before {
+    content: "\00B7";
+    position: absolute;
+    left: -15px;
   }
 
   // https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/

@@ -2,48 +2,51 @@
 layout: default
 ---
 
-<h1>Elise Hein</h1>
+<body class="page--index">
+  <main>
+    <h1>Elise Hein</h1>
 
-<section>
-  <h2>Projects</h2>
+    <section>
+      <h2>Projects</h2>
 
-  <ul>
-    <li>
-      <small>2016</small>
-      <!-- TODO replace with category that reflects MSc topic -->
-      <a href="{{ site.baseurl }}/dissertation">Designing for copy & paste error prevention</a>
-    </li>
-
-    <li>
-      <small>2016</small>
-      <a href="{{ site.baseurl }}/monogram">Monogram</a>
-    </li>
-
-    <li>
-      <small>2015</small>
-      <a href="{{ site.baseurl }}/handy">Smart support for medication adherence</a>
-    </li>
-  </ul>
-</section>
-
-<section>
-  <h2>Latest</h2>
-
-  <ul>
-    {% assign postCounter = 0 %}
-    {% assign maxPosts = 5 %}
-    {% for post in site.posts %}
-      {% unless post.categories contains "nolistlatest" %}
+      <ul>
         <li>
-          <small>{{ post.date | date: "%m.%Y"}}</small>
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <small>2016</small>
+          <a href="{{ site.baseurl }}/devux">Designing for copy & paste error prevention</a>
         </li>
-        {% assign postCounter = postCounter | plus: 1 %}
-        {% if postCounter >= maxPosts %}
-          {% break %}
-        {% endif %}
-      {% endunless %}
-    {% endfor %}
-  </ul>
 
-</section>
+        <li>
+          <small>2016</small>
+          <a href="{{ site.baseurl }}/monogram">Monogram</a>
+        </li>
+
+        <li>
+          <small>2015</small>
+          <a href="{{ site.baseurl }}/handy">Smart support for medication adherence</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Latest</h2>
+
+      <ul>
+        {% assign postCounter = 0 %}
+        {% assign maxPosts = 5 %}
+        {% for post in site.posts %}
+          {% unless post.categories contains "nolistlatest" %}
+            <li>
+              <small>{{ post.date | date: "%m.%Y"}}</small>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+            {% assign postCounter = postCounter | plus: 1 %}
+            {% if postCounter >= maxPosts %}
+              {% break %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </ul>
+
+    </section>
+  </main>
+</body>

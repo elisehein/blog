@@ -2,7 +2,11 @@
 
   <header class="single-post__header">
     <h1 class="single-post__title">
+      {% if include.linkable-title %}
+      <a href="{{ include.object.url }}">{{ include.object.title }}</a>
+      {% else %}
       {{ include.object.title }}
+      {% endif %}
     </h1>
     <small class="single-post__meta">
       <a href="/blog">&#8592; Elise Hein</a>
@@ -12,7 +16,6 @@
     </small>
   </header>
 
-  <!-- TODO theme not showing under post in categories page -->
   <div class="single-post__body">
     {% if page.theme %}
     <span class="single-post__theme">{{ page.theme }}<span class="single-post__theme__em">&mdash;</span></span>

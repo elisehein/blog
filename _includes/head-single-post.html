@@ -1,11 +1,10 @@
-<!-- TODO make these work on the main page, too -->
-<!-- TODO add itemscope, itemprop etc items here if it's a blog post page -->
+<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
 <meta property="og:type" content="article">
 <meta property="og:title"
       content="{% if page.title %}{{ page.title }}{% else %}{{ site.title}}{% endif %}">
 <meta property="og:url"
       content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-<!-- TODO define excerpts in each post -->
 <meta property="og:description"
       content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
