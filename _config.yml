@@ -19,5 +19,5 @@ gems:
   - jekyll-paginate
 
 # How many posts per page
-paginate: 2
+paginate: 5
 paginate_path: "/blog/:num/"

@@ -2,6 +2,10 @@
 @import "mixins";
 @import "variables";
 
+.page--single-post {
+  margin-top: 26vmin;
+}
+
 .single-post {
   $line-height: 2 * $baseline;
 
@@ -12,10 +16,14 @@
   $paragraph-spacing: 2 * $baseline;
   $element-spacing: 5 * $baseline;
 
-  margin: 26vmin 0 (18 * $baseline) 32vmin;
-  max-width: $content-width;
+  padding: 0 0 (18 * $baseline) 32vmin;
   font-size: ms(0);
   line-height: $line-height;
+
+  &__header,
+  &__body {
+    max-width: $content-width;
+  }
 
   &__header {
     margin-bottom: 10 * $baseline;

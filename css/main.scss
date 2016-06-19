@@ -4,7 +4,8 @@
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base",
+@import "reset",
+        "base",
         "components/header",
         "components/post",
         "components/footer",

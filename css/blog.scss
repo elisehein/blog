@@ -3,7 +3,8 @@
 ---
 @charset "utf-8";
 
-@import "base",
+@import "reset",
+        "base",
         "pages/blog",
         "components/header",
         "components/post",

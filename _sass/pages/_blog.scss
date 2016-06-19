@@ -1,1 +1,10 @@
 @import "variables";
+
+.page--blog {
+  margin-top: 26vmin;
+
+  .single-post:not(:first-child) {
+    padding-top: 18 * $baseline;
+    border-top: 1px solid rgba($color-text, 0.5);
+  }
+}

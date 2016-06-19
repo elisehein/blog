@@ -2,27 +2,66 @@
 layout: default
 ---
 
+{% include head.html src="head-index.html" %}
+
 <body class="page--index">
   <main>
-    <h1>Elise Hein</h1>
+    <section>
+      <h1>A bit about Elise Hein</h1>
+      <p>
+        I build software at <a href="http://moo.com">Moo</a> Labs,
+        where we seek to solve problems around digital identity. We've just
+        launched <a href="https://monogram.me">Monogram</a>. By night, I study
+        human-computer interaction at <a
+          href="https://uclic.ucl.ac.uk/">UCL</a>, where I'm currently <a
+          href="{{ site.baseurl }}/devux">researching opportunities</a> to
+        introduce user-centred design into the programmer's development
+        environment.
+      </p>
+      <p>
+        Though I'm most at home close to the user, building interfaces and
+        prototyping experiences, I consider myself a generalist developer.
+        According to GitHub, over the past month I've written mostly Ruby; over
+        the past year – JavaScript.
+      </p>
+
+      <ul>
+        <li>
+          London
+        </li>
+        <li>
+          <a href="mailto:elisehein@gmail.com">
+            elisehein@gmail.com
+          </a>
+        </li>
+      </ul>
+
+      <!--<img width="100%" src="/i/hello.jpg" alt="This is me">-->
+    </section>
 
     <section>
       <h2>Projects</h2>
 
-      <ul>
+      <ul class="post-list">
         <li>
-          <small>2016</small>
-          <a href="{{ site.baseurl }}/devux">Designing for copy & paste error prevention</a>
+          <a class="post-list__link" href="{{ site.baseurl }}/devux">
+            Designing for copy & paste error prevention
+          </a>
+          <time class="post-list__time" datetime="2016">2016</time>
         </li>
 
         <li>
-          <small>2016</small>
-          <a href="{{ site.baseurl }}/monogram">Monogram</a>
+          <a class="post-list__link" href="{{ site.baseurl }}/monogram">
+            Monogram
+          </a>
+          <time class="post-list__time" datetime="2016">2015-16</time>
         </li>
 
         <li>
-          <small>2015</small>
-          <a href="{{ site.baseurl }}/handy">Smart support for medication adherence</a>
+          <a class="post-list__link" href="{{ site.baseurl }}/handy">
+            Smart support for medication adherence
+          </a>
+          <time class="post-list__time" datetime="2015-12">2015</time>
         </li>
       </ul>
     </section>
@@ -30,19 +69,15 @@ layout: default
     <section>
       <h2>Latest</h2>
 
-      <ul>
-        {% assign postCounter = 0 %}
-        {% assign maxPosts = 5 %}
+      <ul class="post-list">
         {% for post in site.posts %}
           {% unless post.categories contains "nolistlatest" %}
             <li>
-              <small>{{ post.date | date: "%m.%Y"}}</small>
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              <a class="post-list__link" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+              </a>
+              <time class="post-list__time" datetime="post.date">{{ post.date | date: "%m/%Y"}}</time>
             </li>
-            {% assign postCounter = postCounter | plus: 1 %}
-            {% if postCounter >= maxPosts %}
-              {% break %}
-            {% endif %}
           {% endunless %}
         {% endfor %}
       </ul>
