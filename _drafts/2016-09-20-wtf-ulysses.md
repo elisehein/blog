@@ -1,0 +1,1 @@
+Why can I just not store .ulysses files locally like it has been working for forver with all apps? Nobody ever worried about sending a .doc to someone who didn't have Office.. It was their own problem. Copy quote from support email.
